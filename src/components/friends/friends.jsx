@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import friends from '../../friends.json';
 import { FriendListStyle, IsOnlineStatus, FriendCard } from './friends.style';
 export const FriendList = () => {

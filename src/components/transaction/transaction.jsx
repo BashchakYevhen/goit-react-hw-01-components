@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import transactions from '../../transactions.json';
 import { TableHead, TableCell, TableString, Table } from './transaction.style';
 export const TransactionHistory = () => {

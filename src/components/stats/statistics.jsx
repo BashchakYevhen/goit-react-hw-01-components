@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import data from '../../data.json';
 import { getRandomHexColor } from 'components/utils/randomColor';
 import { ListInfo, StatBox, StatSection, StatData } from './statistics.style';
