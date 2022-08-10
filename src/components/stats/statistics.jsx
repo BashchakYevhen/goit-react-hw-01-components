@@ -1,28 +1,25 @@
 import PropTypes from 'prop-types';
-import data from '../../data.json';
-import { getRandomHexColor } from 'components/utils/randomColor';
+// import data from '../../data.json';
+
 import { ListInfo, StatBox, StatSection, StatData } from './statistics.style';
-export const Statistics = () => {
+export const Statistics = ({ data, title }) => {
   return (
     <StatSection>
-      <h2>Upload stats</h2>
+      {title && <h2>{title}</h2>}
       <ListInfo>
-        {data.map(stat => {
-          return <StatisticsItem key={stat.id} stat={stat} />;
+        {data.map(({ id, label, percentage }) => {
+          return (
+            <StatBox key={id}>
+              <StatData>{label}</StatData>
+              <StatData>{percentage}</StatData>
+            </StatBox>
+          );
         })}
       </ListInfo>
     </StatSection>
   );
 };
 
-const StatisticsItem = ({ stat: { label, percentage } }) => {
-  return (
-    <StatBox style={{ backgroundColor: getRandomHexColor() }}>
-      <StatData>{label}</StatData>
-      <StatData>{percentage}</StatData>
-    </StatBox>
-  );
-};
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(

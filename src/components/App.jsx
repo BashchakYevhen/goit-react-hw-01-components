@@ -21,7 +21,7 @@ export const App = () => {
         React homework template
       </div>
       <Profile user={user} />
-      <Statistics data={data} />
+      <Statistics data={data} title="Upload stats" />
       <FriendList />
       <TransactionHistory />
       <GlobalStyle />
