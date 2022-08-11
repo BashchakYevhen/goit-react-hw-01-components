@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getRandomHexColor } from 'components/utils/randomColor';
+import { getRandomHexColor } from 'utils/randomColor';
 
 export const StatSection = styled.div`
   margin: 30px auto 0;
